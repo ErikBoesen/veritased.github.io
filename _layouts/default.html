@@ -6,7 +6,13 @@
 <body>
     {% include header.html %}
 
-    {{ content }}
+    {% if page.jumbotron %}
+        {% include jumbotron.html %}
+    {% endif %}
+
+    <article>
+        {{ content }}
+    </article>
 
     {% include footer.html %}
 </body>
